@@ -1,5 +1,7 @@
 package workinclass;
 
+// static переменные хранятся в памяти до завершения программы и не уничтожаются сборщиком
+
 public class StaticInClass {
     public static void main(String[] args) {
         System.out.println("Create obj 1");
