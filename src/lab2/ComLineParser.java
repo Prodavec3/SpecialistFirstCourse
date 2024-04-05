@@ -22,12 +22,12 @@ public class ComLineParser {
         System.out.println("-w  выполнить вывод в указанный файл");
     }
 
-    public switchStatus OnSwitch(String key, String keyValue){
+    public switchStatus onSwitch(String key, String keyValue){
         System.out.println("Key: " + key + " | Value: " + keyValue);
         return switchStatus.NoError;
     }
 
-    public boolean Parse(String[] args){
+    public boolean parse(String[] args){
         switchStatus switchStatus = ComLineParser.switchStatus.NoError;
         int argNum;
         for (argNum = 0; (switchStatus == ComLineParser.switchStatus.NoError) &&
@@ -49,7 +49,7 @@ public class ComLineParser {
                     switchStatus = ComLineParser.switchStatus.Error;
                     break;
                 } else {
-                    switchStatus = OnSwitch(keys[i].toLowerCase(),
+                    switchStatus = onSwitch(keys[i].toLowerCase(),
                             args[argNum].substring(1 + keys[i].length()));
                 }
             } else {
