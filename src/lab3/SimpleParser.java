@@ -44,7 +44,7 @@ public class SimpleParser extends ComLineParserBase {
                 }
                 break;
             case "w":
-                if (keyValue. length() > 1){
+                if (keyValue. length() >= 1){
                     outFile = keyValue;
                 } else {
                     System.out.println("Error: keyValue length < 1");
