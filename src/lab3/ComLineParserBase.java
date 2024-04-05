@@ -14,13 +14,13 @@ public abstract class ComLineParserBase {
         this.delimeters   = delimeters;
     }
 
-    protected abstract void OnUsage(String errorKey);
+    protected abstract void onUsage(String errorKey);
 
-    protected SwitchStatus OnSwitch(String key, String keyValue) {
+    protected SwitchStatus onSwitch(String key, String keyValue) {
         return SwitchStatus.Error;
     }
 
-    public final Boolean Parse(String[] args) {
+    public final Boolean parse(String[] args) {
         SwitchStatus ss = SwitchStatus.NoError;	    
 
         int argNum;
@@ -46,7 +46,7 @@ public abstract class ComLineParserBase {
                     break;
                 } 
                 else {
-                    ss = OnSwitch(keys[i].toLowerCase(), 
+                    ss = onSwitch(keys[i].toLowerCase(),
                          args[argNum].substring(1 + keys[i].length()));
                 }
             }
@@ -56,8 +56,8 @@ public abstract class ComLineParserBase {
             }
         }
         // завершение разбора командной строки
-        if (ss == SwitchStatus.ShowUsage)    OnUsage(null);
-        if (ss == SwitchStatus.Error)        OnUsage((argNum == args.length) ? null : args[argNum]);
+        if (ss == SwitchStatus.ShowUsage)    onUsage(null);
+        if (ss == SwitchStatus.Error)        onUsage((argNum == args.length) ? null : args[argNum]);
         
         return ss == SwitchStatus.NoError;
     }      

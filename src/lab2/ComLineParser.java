@@ -27,7 +27,7 @@ public class ComLineParser {
         return switchStatus.NoError;
     }
 
-    public boolean parse(String[] args){
+    public boolean Parse(String[] args){
         switchStatus switchStatus = ComLineParser.switchStatus.NoError;
         int argNum;
         for (argNum = 0; (switchStatus == ComLineParser.switchStatus.NoError) &&

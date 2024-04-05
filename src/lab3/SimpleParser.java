@@ -17,7 +17,7 @@ public class SimpleParser extends ComLineParserBase {
     }
 
     @Override
-    protected void OnUsage(String errorKey) {
+    protected void onUsage(String errorKey) {
         if (errorKey != null) System.out.println("Command-line switch error:" + errorKey);
 
         System.out.println("формат ком.строки: имяПрограммы [-r<input-fileName>] " +
@@ -28,7 +28,7 @@ public class SimpleParser extends ComLineParserBase {
     }
 
     @Override
-    protected SwitchStatus OnSwitch(String key, String keyValue) {
+    protected SwitchStatus onSwitch(String key, String keyValue) {
         SwitchStatus status = SwitchStatus.NoError;
 
         switch (key){
