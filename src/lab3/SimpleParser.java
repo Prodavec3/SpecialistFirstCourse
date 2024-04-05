@@ -51,6 +51,9 @@ public class SimpleParser extends ComLineParserBase {
                     status = SwitchStatus.Error;
                 }
                 break;
+            default:
+                System.out.println("Invalid string value entered");
+                status = SwitchStatus.Error;
         }
         return status;
     }
