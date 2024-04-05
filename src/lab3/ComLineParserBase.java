@@ -15,13 +15,7 @@ public class ComLineParserBase {
     }
 
     protected void OnUsage(String errorKey){
-//        if (errorKey != null)
-//            System.out.println("Command-line switch error:" + errorKey);
-//
-//        System.out.println("формат ком.строки: имяПрограммы [-r<input-fileName>] [-w<output-fileName>]");
-//	System.out.println("   -?  показать Help файл");
-//	System.out.println("   -r  задать имя входного файла");
-//	System.out.println("   -w  выполнить вывод в указанный файл");
+
     }
     protected SwitchStatus OnSwitch(String key, String keyValue) {
         return SwitchStatus.Error;
