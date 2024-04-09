@@ -9,7 +9,8 @@ import java.io.IOException;
 public class Main {
     public static void main(String[] args) throws IOException {
         // Создаем новый файл
-        File file = new File("C:\\Users\\iu.biriukov\\Desktop\\untitled6\\src\\work_with_file\\testFile.txt");
+        File file = new File("C:\\Users\\Юрий\\IdeaProjects\\" +
+                "SpecialistFirstCourse\\src\\workinclass\\work_with_file\\testFile.txt");
         file.createNewFile();
 
         File folder = new File(".");
